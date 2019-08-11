@@ -7,6 +7,18 @@ function menu(){
         header.removeClass('active');
     }
 }
+
+function clickBurger(){
+    let btn = $('.btn-menu');
+    let navbar = $('.nav-bar');
+    btn.click(function(){
+        $(this).toggleClass('open');
+        navbar.slideToggle();
+    });
+}
 $(window).scroll(function(){
     menu();
+});
+$(document).ready(function(){
+    clickBurger();
 });
